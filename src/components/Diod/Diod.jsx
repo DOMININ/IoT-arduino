@@ -1,20 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import socket from '@socket/socket';
 
+import './diod.scss';
+
 const Diod = () => {
+  const [isActive, setIsActive] = useState(false);
+
   const setDiodOn = () => {
     socket.emit('lights', { status: '1' });
+    setIsActive(true);
   };
 
   const setDiodOff = () => {
     socket.emit('lights', { status: '0' });
+    setIsActive(false);
   };
 
   return (
-    <>
-      <button onClick={setDiodOn}>Вкл</button>
-      <button onClick={setDiodOff}>Выкл</button>
-    </>
+    <div className="led">
+      <h4>Diod</h4>
+      {isActive ? (
+        <button onClick={setDiodOff}>Выкл</button>
+      ) : (
+        <button onClick={setDiodOn}>Вкл</button>
+      )}
+    </div>
   );
 };
 

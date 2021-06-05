@@ -37,6 +37,11 @@ io.on('connection', (socket) => {
     port.write(data.status);
   });
 
+  // Сервомотор
+  socket.on('servomotor', (data) => {
+    port.write(data.position);
+  });
+
   // Дальномер
   parser.on('data', (data) => {
     io.emit('data', data);

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import socket from '@socket/socket';
 
+import './sonar.scss';
+
 const Sonar = () => {
   const [range, setRange] = useState(0);
 
@@ -8,7 +10,12 @@ const Sonar = () => {
     setRange(data);
   });
 
-  return <p>{range}</p>;
+  return (
+    <div className="sonar">
+      <h4>Sonar</h4>
+      <span>{range}</span>
+    </div>
+  );
 };
 
 export default Sonar;
