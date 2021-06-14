@@ -18,7 +18,7 @@ const Diod = () => {
 
   return (
     <div className="led">
-      <h4>Diod</h4>
+      <h4>Светодиод</h4>
       {isActive ? (
         <button onClick={setDiodOff}>Выкл</button>
       ) : (

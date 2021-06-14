@@ -20,7 +20,7 @@ const Servo = () => {
 
   return (
     <div className="servo">
-      <h4>Servo</h4>
+      <h4>Сервомотор</h4>
       <input type="range" min="0" max="180" step="10" value={position} onChange={onChange}></input>
     </div>
   );

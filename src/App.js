@@ -39,7 +39,7 @@ const App = (props) => {
           ))}
         </DragDropContext>
         <div className="containers__control">
-          <h3>Control panel</h3>
+          <h3>Панель управления</h3>
           {tasks[0].cards.map((item, key) => {
             return <div key={key}>{React.createElement(components[item])}</div>;
           })}

@@ -12,7 +12,7 @@ const Sonar = () => {
 
   return (
     <div className="sonar">
-      <h4>Sonar</h4>
+      <h4>Датчик дальности</h4>
       <span>{range}</span>
     </div>
   );
